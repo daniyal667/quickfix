@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="QuickFix technician and repair services around Karachi.">
+<title>QuickFix | Home</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <div class="logo-icon"><img src="assets/logo.jpg" alt="QuickFix logo"></div>
+      <div><div class="logo">Quick<span>Fix</span></div><small>TECHNICIAN & REPAIR SERVICES</small></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="professionals.html">Professionals</a></li>
+      <li><a href="offers.html">Offers</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-btn" id="themeBtn" onclick="toggleTheme()">🌙</button>
+      <a href="services.html" class="nav-book">Book Repair</a>
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </div>
+  </div>
+</header>
+
+<main class="hero-wrap">
+  <div class="container hero">
+    <div>
+      <span class="badge">⚡ FAST • RELIABLE • NEARBY</span>
+      <h1>Your Problem. <span class="gradient-text">Our Fix.</span></h1>
+      <p>QuickFix provides convenient technician and repair services for homes, offices, electronics and vehicles around Karachi. This is now a true multi-page website: use the navigation above to open each section as a separate page.</p>
+      <div class="hero-buttons">
+        <a href="services.html" class="btn btn-primary">Explore Services →</a>
+        <a href="https://wa.me/923482934535?text=Hello%20QuickFix!%20I%20need%20repair%20assistance." target="_blank" class="btn btn-whatsapp">WhatsApp Us</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>16+</strong><span>Repair Services</span></div>
+        <div class="stat"><strong>7</strong><span>Separate Pages</span></div>
+        <div class="stat"><strong>Karachi</strong><span>Service Area</span></div>
+      </div>
+    </div>
+    <div class="hero-card asset-card" id="heroCard">
+      <img class="hero-asset" src="assets/hero-tech.jpg" alt="QuickFix technician and repair services">
+    </div>
+  </div>
+</main>
+
+<section class="section">
+  <div class="container">
+    <div class="section-heading">
+      <span>EXPLORE QUICKFIX</span>
+      <h2>Every section has its <span class="gradient-text">own page.</span></h2>
+      <p>Click a card below. The browser will load a different HTML file instead of scrolling on the same page.</p>
+    </div>
+    <div class="grid-3">
+      <a class="card" href="services.html"><div class="card-icon">🧰</div><h3>Services</h3><p>Browse all repair and technician services on a dedicated page.</p></a>
+      <a class="card" href="professionals.html"><div class="card-icon">👨‍🔧</div><h3>Professionals</h3><p>View sample technician profiles on a separate page.</p></a>
+      <a class="card" href="offers.html"><div class="card-icon">🎁</div><h3>Offers</h3><p>See QuickFix promotions and service offers.</p></a>
+      <a class="card" href="reviews.html"><div class="card-icon">⭐</div><h3>Reviews</h3><p>Read customer feedback on its own page.</p></a>
+      <a class="card" href="about.html"><div class="card-icon">ℹ️</div><h3>About Us</h3><p>Learn about QuickFix, its mission and service approach.</p></a>
+      <a class="card" href="contact.html"><div class="card-icon">📍</div><h3>Contact & Location</h3><p>Open the contact form, social links and Iqra University map.</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta">
+      <h2>Need a technician?</h2>
+      <p>Call or message QuickFix at 0348 2934535.</p>
+      <a href="contact.html" class="btn btn-primary" style="background:white;color:#6257ff;">Open Contact Page →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div><div class="logo" style="color:white;">Quick<span>Fix</span></div><p>Technician and repair services around Karachi.</p><div class="footer-socials"><a href="https://instagram.com/quickfix.com" target="_blank">📸</a><a href="https://facebook.com/quickfix.com" target="_blank">👍</a><a href="https://wa.me/923482934535" target="_blank">🟢</a></div></div>
+    <div><h4>Company</h4><a href="about.html">About</a><a href="professionals.html">Professionals</a></div>
+    <div><h4>Explore</h4><a href="services.html">Services</a><a href="offers.html">Offers</a><a href="reviews.html">Reviews</a></div>
+    <div><h4>Contact</h4><a href="tel:+923482934535">0348 2934535</a><a href="contact.html">Iqra University, Karachi</a></div>
+  </div>
+  <div class="container copyright">© 2026 QuickFix. All Rights Reserved.</div>
+</footer>
+<a href="https://wa.me/923482934535" target="_blank" class="floating-whatsapp">☎</a>
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>

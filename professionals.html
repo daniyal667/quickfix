@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>QuickFix | Professionals</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<header class="navbar">
+
+<div class="container nav-inner">
+
+<a href="index.html" class="brand">
+
+<div class="logo-icon"><img src="assets/logo.jpg" alt="QuickFix logo"></div>
+
+<div>
+
+<div class="logo">
+Quick<span>Fix</span>
+</div>
+
+<small>
+TECHNICIAN & REPAIR SERVICES
+</small>
+
+</div>
+
+</a>
+
+
+<ul class="nav-links" id="navLinks">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="professionals.html">Professionals</a></li>
+<li><a href="offers.html">Offers</a></li>
+<li><a href="reviews.html">Reviews</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+
+<div class="nav-actions">
+
+<button
+class="theme-btn"
+id="themeBtn"
+onclick="toggleTheme()">
+🌙
+</button>
+
+<a
+href="services.html"
+class="nav-book">
+Book Repair
+</a>
+
+<button
+class="menu-btn"
+onclick="toggleMenu()">
+☰
+</button>
+
+</div>
+
+</div>
+
+</header>
+
+
+<section class="page-hero">
+
+<div class="container">
+
+<span class="badge">
+OUR PROFESSIONALS
+</span>
+
+<h1>
+
+Meet the people behind
+
+<span class="gradient-text">
+QuickFix.
+</span>
+
+</h1>
+
+<p>
+
+Our sample technician profiles
+demonstrate the professionals
+available through QuickFix.
+
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+<div class="grid-3">
+
+
+<div class="card">
+
+<div class="pro-top">
+
+<div class="avatar">👨‍🔧</div>
+
+<div>
+
+<h3>Ali Ahmed</h3>
+
+<p>
+Plumbing Technician
+</p>
+
+</div>
+
+</div>
+
+<div class="rating">
+⭐⭐⭐⭐⭐ 4.9
+</div>
+
+<div class="pro-meta">
+
+<span>
+📍 Karachi
+</span>
+
+<span class="available">
+● Available
+</span>
+
+</div>
+
+<button
+class="book-btn"
+onclick="bookService('Plumber - Ali Ahmed')">
+
+Book Ali
+
+</button>
+
+</div>
+
+
+<div class="card">
+
+<div class="pro-top">
+
+<div class="avatar">👨‍🔧</div>
+
+<div>
+
+<h3>Usman Khan</h3>
+
+<p>
+Electrical Technician
+</p>
+
+</div>
+
+</div>
+
+<div class="rating">
+⭐⭐⭐⭐⭐ 4.8
+</div>
+
+<div class="pro-meta">
+
+<span>
+📍 Karachi
+</span>
+
+<span class="available">
+● Available
+</span>
+
+</div>
+
+<button
+class="book-btn"
+onclick="bookService('Electrician - Usman Khan')">
+
+Book Usman
+
+</button>
+
+</div>
+
+
+<div class="card">
+
+<div class="pro-top">
+
+<div class="avatar">👨‍🔧</div>
+
+<div>
+
+<h3>Hamza Malik</h3>
+
+<p>
+AC Technician
+</p>
+
+</div>
+
+</div>
+
+<div class="rating">
+⭐⭐⭐⭐⭐ 4.9
+</div>
+
+<div class="pro-meta">
+
+<span>
+📍 Karachi
+</span>
+
+<span class="available">
+● Available
+</span>
+
+</div>
+
+<button
+class="book-btn"
+onclick="bookService('AC Technician - Hamza Malik')">
+
+Book Hamza
+
+</button>
+
+</div>
+
+
+<div class="card">
+
+<div class="pro-top">
+
+<div class="avatar">👨‍💻</div>
+
+<div>
+
+<h3>Fahad Ali</h3>
+
+<p>
+Computer Technician
+</p>
+
+</div>
+
+</div>
+
+<div class="rating">
+⭐⭐⭐⭐⭐ 4.9
+</div>
+
+<div class="pro-meta">
+
+<span>📍 Karachi</span>
+
+<span class="available">
+● Available
+</span>
+
+</div>
+
+<button
+class="book-btn"
+onclick="bookService('Computer Repair - Fahad Ali')">
+
+Book Fahad
+
+</button>
+
+</div>
+
+
+<div class="card">
+
+<div class="pro-top">
+
+<div class="avatar">📱</div>
+
+<div>
+
+<h3>Saad Ahmed</h3>
+
+<p>
+Mobile Technician
+</p>
+
+</div>
+
+</div>
+
+<div class="rating">
+⭐⭐⭐⭐⭐ 4.7
+</div>
+
+<div class="pro-meta">
+
+<span>📍 Karachi</span>
+
+<span class="available">
+● Available
+</span>
+
+</div>
+
+<button
+class="book-btn"
+onclick="bookService('Mobile Repair - Saad Ahmed')">
+
+Book Saad
+
+</button>
+
+</div>
+
+
+<div class="card">
+
+<div class="pro-top">
+
+<div class="avatar">🚗</div>
+
+<div>
+
+<h3>Ahmed Raza</h3>
+
+<p>
+Vehicle Mechanic
+</p>
+
+</div>
+
+</div>
+
+<div class="rating">
+⭐⭐⭐⭐⭐ 4.8
+</div>
+
+<div class="pro-meta">
+
+<span>📍 Karachi</span>
+
+<span class="available">
+● Available
+</span>
+
+</div>
+
+<button
+class="book-btn"
+onclick="bookService('Car Mechanic - Ahmed Raza')">
+
+Book Ahmed
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="container footer-grid">
+
+<div>
+
+<div class="logo" style="color:white;">
+Quick<span>Fix</span>
+</div>
+
+<p>
+QuickFix professional technician services.
+</p>
+
+</div>
+
+<div>
+
+<h4>Pages</h4>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+
+</div>
+
+<div>
+
+<h4>More</h4>
+<a href="reviews.html">Reviews</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+<div>
+
+<h4>Phone</h4>
+<a href="tel:+923482934535">
+0348 2934535
+</a>
+
+</div>
+
+</div>
+
+<div class="container copyright">
+© 2026 QuickFix.
+</div>
+
+</footer>
+
+
+<a
+href="https://wa.me/923482934535"
+target="_blank"
+class="floating-whatsapp">
+☎
+</a>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
