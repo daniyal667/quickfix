@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>QuickFix | Services</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+<div class="container nav-inner">
+
+<a href="index.html" class="brand">
+
+<div class="logo-icon">🛠</div>
+
+<div>
+
+<div class="logo">
+Quick<span>Fix</span>
+</div>
+
+<small>
+TECHNICIAN & REPAIR SERVICES
+</small>
+
+</div>
+
+</a>
+
+
+<ul class="nav-links" id="navLinks">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="professionals.html">Professionals</a></li>
+<li><a href="offers.html">Offers</a></li>
+<li><a href="reviews.html">Reviews</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+
+<div class="nav-actions">
+
+<button
+class="theme-btn"
+id="themeBtn"
+onclick="toggleTheme()">
+🌙
+</button>
+
+<a
+href="contact.html"
+class="nav-book">
+Book Repair
+</a>
+
+<button
+class="menu-btn"
+onclick="toggleMenu()">
+☰
+</button>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- PAGE HERO -->
+
+<section class="page-hero">
+
+<div class="container">
+
+<span class="badge">
+QUICKFIX SERVICES
+</span>
+
+<h1>
+
+Find the right
+
+<span class="gradient-text">
+repair service.
+</span>
+
+</h1>
+
+
+<p>
+
+From home repairs and electrical work
+to computer, mobile and vehicle services,
+QuickFix helps you find the right service
+for your problem.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="section">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<span>
+ALL SERVICES
+</span>
+
+<h2>
+
+What Can
+
+<span class="gradient-text">
+QuickFix Repair?
+</span>
+
+</h2>
+
+<p>
+
+Search your required service below
+or click any service card to contact
+QuickFix directly through WhatsApp.
+
+</p>
+
+</div>
+
+
+<!-- SEARCH -->
+
+<div class="service-search-area">
+
+<input
+type="text"
+id="serviceSearch"
+class="service-search"
+onkeyup="filterServices()"
+placeholder="🔍 Search services...">
+
+
+<button
+class="btn btn-outline"
+onclick="showAllServices()">
+
+Show All Services
+
+</button>
+
+</div>
+
+
+<!-- SERVICES GRID -->
+
+<div class="grid-4">
+
+
+<!-- PLUMBER -->
+
+<div
+class="card service-card"
+data-name="plumber plumbing pipe water leakage tap"
+onclick="bookService('Plumber')">
+
+<div class="card-icon">
+🔧
+</div>
+
+<h3>
+Plumber
+</h3>
+
+<p>
+
+Pipe leakage,
+tap repair,
+water problems and
+general plumbing services.
+
+</p>
+
+<div class="service-price">
+From Rs. 800
+</div>
+
+</div>
+
+
+<!-- ELECTRICIAN -->
+
+<div
+class="card service-card"
+data-name="electrician electrical wiring switch socket"
+onclick="bookService('Electrician')">
+
+<div class="card-icon">
+⚡
+</div>
+
+<h3>
+Electrician
+</h3>
+
+<p>
+
+Wiring,
+switches,
+sockets and
+general electrical repairs.
+
+</p>
+
+<div class="service-price">
+From Rs. 700
+</div>
+
+</div>
+
+
+<!-- AC -->
+
+<div
+class="card service-card"
+data-name="ac technician air conditioner cooling service"
+onclick="bookService('AC Technician')">
+
+<div class="card-icon">
+❄️
+</div>
+
+<h3>
+AC Technician
+</h3>
+
+<p>
+
+AC servicing,
+cooling issues,
+inspection and
+installation support.
+
+</p>
+
+<div class="service-price">
+From Rs. 1,200
+</div>
+
+</div>
+
+
+<!-- CLEANING -->
+
+<div
+class="card service-card"
+data-name="home cleaning office cleaning"
+onclick="bookService('Home Cleaning')">
+
+<div class="card-icon">
+🧹
+</div>
+
+<h3>
+Home Cleaning
+</h3>
+
+<p>
+
+Professional cleaning
+for homes,
+rooms and
+office spaces.
+
+</p>
+
+<div class="service-price">
+From Rs. 1,500
+</div>
+
+</div>
+
+
+<!-- CARPENTER -->
+
+<div
+class="card service-card"
+data-name="carpenter furniture wood door"
+onclick="bookService('Carpenter')">
+
+<div class="card-icon">
+🔨
+</div>
+
+<h3>
+Carpenter
+</h3>
+
+<p>
+
+Furniture repair,
+door work,
+woodwork and
+general carpentry.
+
+</p>
+
+<div class="service-price">
+From Rs. 1,000
+</div>
+
+</div>
+
+
+<!-- PAINTER -->
+
+<div
+class="card service-card"
+data-name="painter painting wall home paint"
+onclick="bookService('Painter')">
+
+<div class="card-icon">
+🎨
+</div>
+
+<h3>
+Painter
+</h3>
+
+<p>
+
+Wall painting,
+room painting
+and complete
+home paint services.
+
+</p>
+
+<div class="service-price">
+From Rs. 2,000
+</div>
+
+</div>
+
+
+<!-- CAR MECHANIC -->
+
+<div
+class="card service-card"
+data-name="car mechanic vehicle automobile"
+onclick="bookService('Car Mechanic')">
+
+<div class="card-icon">
+🚗
+</div>
+
+<h3>
+Car Mechanic
+</h3>
+
+<p>
+
+Car inspection,
+basic repairs,
+maintenance and
+vehicle support.
+
+</p>
+
+<div class="service-price">
+From Rs. 1,000
+</div>
+
+</div>
+
+
+<!-- BIKE MECHANIC -->
+
+<div
+class="card service-card"
+data-name="bike mechanic motorcycle"
+onclick="bookService('Bike Mechanic')">
+
+<div class="card-icon">
+🏍️
+</div>
+
+<h3>
+Bike Mechanic
+</h3>
+
+<p>
+
+Bike inspection,
+repair,
+maintenance and
+general service.
+
+</p>
+
+<div class="service-price">
+From Rs. 500
+</div>
+
+</div>
+
+
+<!-- COMPUTER -->
+
+<div
+class="card service-card"
+data-name="computer laptop pc software hardware repair"
+onclick="bookService('Computer Repair')">
+
+<div class="card-icon">
+💻
+</div>
+
+<h3>
+Computer Repair
+</h3>
+
+<p>
+
+Laptop and PC
+hardware,
+software and
+performance problems.
+
+</p>
+
+<div class="service-price">
+From Rs. 1,000
+</div>
+
+</div>
+
+
+<!-- MOBILE -->
+
+<div
+class="card service-card"
+data-name="mobile phone smartphone screen battery software"
+onclick="bookService('Mobile Repair')">
+
+<div class="card-icon">
+📱
+</div>
+
+<h3>
+Mobile Repair
+</h3>
+
+<p>
+
+Screen,
+battery,
+charging and
+software support.
+
+</p>
+
+<div class="service-price">
+From Rs. 800
+</div>
+
+</div>
+
+
+<!-- WASHING MACHINE -->
+
+<div
+class="card service-card"
+data-name="washing machine appliance repair"
+onclick="bookService('Washing Machine Repair')">
+
+<div class="card-icon">
+🧺
+</div>
+
+<h3>
+Washing Machine
+</h3>
+
+<p>
+
+Washing machine
+inspection,
+repair and
+maintenance.
+
+</p>
+
+<div class="service-price">
+From Rs. 900
+</div>
+
+</div>
+
+
+<!-- REFRIGERATOR -->
+
+<div
+class="card service-card"
+data-name="refrigerator fridge cooling appliance"
+onclick="bookService('Refrigerator Repair')">
+
+<div class="card-icon">
+🧊
+</div>
+
+<h3>
+Refrigerator
+</h3>
+
+<p>
+
+Cooling problems,
+fridge inspection
+and refrigerator
+repair support.
+
+</p>
+
+<div class="service-price">
+From Rs. 900
+</div>
+
+</div>
+
+
+<!-- TV -->
+
+<div
+class="card service-card"
+data-name="tv television led lcd smart tv"
+onclick="bookService('TV Repair')">
+
+<div class="card-icon">
+📺
+</div>
+
+<h3>
+TV Repair
+</h3>
+
+<p>
+
+LED,
+LCD and
+Smart TV
+repair services.
+
+</p>
+
+<div class="service-price">
+From Rs. 1,000
+</div>
+
+</div>
+
+
+<!-- PEST CONTROL -->
+
+<div
+class="card service-card"
+data-name="pest control insects cockroach"
+onclick="bookService('Pest Control')">
+
+<div class="card-icon">
+🐜
+</div>
+
+<h3>
+Pest Control
+</h3>
+
+<p>
+
+Pest treatment
+for homes,
+rooms and
+office areas.
+
+</p>
+
+<div class="service-price">
+From Rs. 1,500
+</div>
+
+</div>
+
+
+<!-- SOFA CLEANING -->
+
+<div
+class="card service-card"
+data-name="sofa cleaning carpet deep cleaning"
+onclick="bookService('Sofa Cleaning')">
+
+<div class="card-icon">
+🛋️
+</div>
+
+<h3>
+Sofa Cleaning
+</h3>
+
+<p>
+
+Deep cleaning
+for sofas,
+carpets and
+seating areas.
+
+</p>
+
+<div class="service-price">
+From Rs. 1,200
+</div>
+
+</div>
+
+
+<!-- MOVING -->
+
+<div
+class="card service-card"
+data-name="moving shifting house office relocation"
+onclick="bookService('Moving & Shifting')">
+
+<div class="card-icon">
+📦
+</div>
+
+<h3>
+Moving & Shifting
+</h3>
+
+<p>
+
+Home and office
+moving,
+packing and
+shifting support.
+
+</p>
+
+<div class="service-price">
+From Rs. 3,000
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span>
+HOW TO BOOK
+</span>
+
+<h2>
+
+Book Your Service in
+
+<span class="gradient-text">
+3 Simple Steps
+</span>
+
+</h2>
+
+</div>
+
+
+<div class="grid-3">
+
+
+<div class="card">
+
+<div class="card-icon">
+1️⃣
+</div>
+
+<h3>
+Choose Service
+</h3>
+
+<p>
+
+Select the service
+that matches your
+repair problem.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+2️⃣
+</div>
+
+<h3>
+Contact QuickFix
+</h3>
+
+<p>
+
+Click the service card
+to open WhatsApp
+with the service name.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+3️⃣
+</div>
+
+<h3>
+Confirm Booking
+</h3>
+
+<p>
+
+Share your details
+and confirm your
+preferred technician time.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="cta">
+
+<h2>
+Can't Find Your Service?
+</h2>
+
+<p>
+
+Send your problem directly
+to QuickFix on WhatsApp
+and we will guide you.
+
+</p>
+
+<a
+href="https://wa.me/923482934535?text=Hello%20QuickFix!%20I%20need%20help%20choosing%20a%20repair%20service."
+target="_blank"
+class="btn btn-whatsapp">
+
+WhatsApp QuickFix
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer-grid">
+
+
+<div>
+
+<div class="logo" style="color:white;">
+Quick<span>Fix</span>
+</div>
+
+<p>
+
+QuickFix provides
+technician and repair
+services around Karachi.
+
+</p>
+
+
+<div class="footer-socials">
+
+<a
+href="https://instagram.com/quickfix.com"
+target="_blank">
+📸
+</a>
+
+<a
+href="https://facebook.com/quickfix.com"
+target="_blank">
+👍
+</a>
+
+<a
+href="https://wa.me/923482934535"
+target="_blank">
+🟢
+</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<h4>
+Quick Links
+</h4>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="professionals.html">
+Professionals
+</a>
+
+</div>
+
+
+<div>
+
+<h4>
+Explore
+</h4>
+
+<a href="offers.html">
+Offers
+</a>
+
+<a href="reviews.html">
+Reviews
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+</div>
+
+
+<div>
+
+<h4>
+Contact
+</h4>
+
+<a href="tel:+923482934535">
+☎ 0348 2934535
+</a>
+
+<a
+href="https://wa.me/923482934535"
+target="_blank">
+🟢 WhatsApp
+</a>
+
+<p>
+📍 Iqra University,
+Karachi
+</p>
+
+</div>
+
+</div>
+
+
+<div class="container copyright">
+
+© 2026 QuickFix.
+All Rights Reserved.
+
+</div>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+href="https://wa.me/923482934535?text=Hello%20QuickFix!%20I%20need%20a%20repair%20service."
+target="_blank"
+class="floating-whatsapp">
+
+☎
+
+</a>
+
+
+<!-- TOAST -->
+
+<div
+class="toast"
+id="toast">
+</div>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

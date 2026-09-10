@@ -1,0 +1,3870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="QuickFix professional technician and repair services near Iqra University Karachi.">
+
+<title>QuickFix - Your Problem. Our Fix.</title>
+
+<style>
+
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --primary:#6257ff;
+    --primary-dark:#4438e5;
+    --blue:#2e8bff;
+    --cyan:#20c8e8;
+    --orange:#ff8a3d;
+    --pink:#e94c9d;
+    --green:#25d366;
+    --dark:#11162a;
+    --text:#182033;
+    --muted:#6f778a;
+    --light:#f6f7ff;
+    --white:#ffffff;
+    --border:#e5e8f4;
+    --shadow:0 20px 50px rgba(47,55,130,.12);
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f8ff;
+    color:var(--text);
+    overflow-x:hidden;
+    transition:.3s;
+}
+
+section{
+    padding:85px 6%;
+}
+
+a{
+    transition:.25s;
+}
+
+button{
+    font-family:inherit;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    width:100%;
+    padding:14px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(70,80,120,.10);
+}
+
+.logo-wrap{
+    display:flex;
+    align-items:center;
+    gap:11px;
+}
+
+.logo-icon{
+    width:46px;
+    height:46px;
+    border-radius:14px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--cyan)
+    );
+
+    color:white;
+    font-size:22px;
+
+    box-shadow:
+    0 10px 25px rgba(98,87,255,.25);
+}
+
+.logo{
+    font-size:29px;
+    font-weight:900;
+    color:var(--primary);
+}
+
+.logo span{
+    color:var(--orange);
+}
+
+.logo-wrap small{
+    display:block;
+    font-size:10px;
+    color:var(--muted);
+    letter-spacing:1px;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:23px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:var(--text);
+    font-weight:bold;
+    font-size:14px;
+    position:relative;
+}
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-7px;
+    width:0;
+    height:2px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--orange)
+    );
+
+    transition:.25s;
+}
+
+.nav-links a:hover{
+    color:var(--primary);
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+.nav-actions{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.theme-btn,
+.menu-btn{
+    width:42px;
+    height:42px;
+
+    border:1px solid var(--border);
+    background:white;
+
+    border-radius:12px;
+    cursor:pointer;
+
+    font-size:18px;
+}
+
+.menu-btn{
+    display:none;
+}
+
+.nav-btn{
+    text-decoration:none;
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--blue)
+    );
+
+    color:white;
+    padding:12px 18px;
+    border-radius:12px;
+    font-weight:bold;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:680px;
+
+    display:grid;
+    grid-template-columns:1.08fr .92fr;
+
+    align-items:center;
+    gap:55px;
+
+    position:relative;
+    overflow:hidden;
+
+    background:
+    radial-gradient(
+        circle at 10% 15%,
+        rgba(32,200,232,.16),
+        transparent 28%
+    ),
+    radial-gradient(
+        circle at 88% 20%,
+        rgba(233,76,157,.12),
+        transparent 30%
+    ),
+    linear-gradient(
+        135deg,
+        #f1f6ff,
+        #fff8fc
+    );
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.badge{
+    display:inline-block;
+
+    padding:9px 16px;
+
+    border-radius:30px;
+
+    background:#ebeaff;
+    color:var(--primary);
+
+    font-size:14px;
+    font-weight:bold;
+
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(52px,6vw,76px);
+    line-height:.98;
+    letter-spacing:-3px;
+    margin-bottom:23px;
+}
+
+.hero h1 span{
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--blue),
+        var(--pink)
+    );
+
+    background-clip:text;
+    -webkit-background-clip:text;
+
+    color:transparent;
+}
+
+.hero-content > p{
+    max-width:650px;
+
+    color:var(--muted);
+
+    font-size:18px;
+    line-height:1.75;
+
+    margin-bottom:28px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.primary-btn,
+.whatsapp-btn{
+    text-decoration:none;
+    color:white;
+
+    padding:15px 24px;
+    border-radius:13px;
+
+    font-weight:bold;
+
+    display:inline-block;
+
+    box-shadow:
+    0 12px 30px rgba(50,60,150,.15);
+}
+
+.primary-btn{
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--blue)
+    );
+}
+
+.whatsapp-btn{
+    background:#25d366;
+}
+
+.primary-btn:hover,
+.whatsapp-btn:hover{
+    transform:translateY(-3px);
+}
+
+.hero-stats{
+    display:flex;
+    flex-wrap:wrap;
+    gap:32px;
+
+    margin-top:35px;
+}
+
+.stat strong{
+    display:block;
+    font-size:23px;
+}
+
+.stat small{
+    color:var(--muted);
+}
+
+/* HERO CARD */
+
+.hero-visual{
+    display:flex;
+    justify-content:center;
+
+    position:relative;
+}
+
+.hero-card{
+    width:min(430px,100%);
+    min-height:480px;
+
+    padding:42px 30px;
+
+    border-radius:40px;
+
+    text-align:center;
+    color:white;
+
+    position:relative;
+    overflow:hidden;
+
+    background:
+    radial-gradient(
+        circle at 80% 15%,
+        rgba(255,255,255,.25),
+        transparent 25%
+    ),
+    linear-gradient(
+        145deg,
+        #5b55ff,
+        #3178db,
+        #13a7c5
+    );
+
+    box-shadow:
+    0 35px 80px rgba(55,70,190,.28);
+
+    transition:transform .15s;
+}
+
+.worker{
+    width:150px;
+    height:150px;
+
+    margin:25px auto;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:rgba(255,255,255,.14);
+
+    border:1px solid rgba(255,255,255,.20);
+
+    font-size:87px;
+}
+
+.hero-card h2{
+    font-size:30px;
+}
+
+.hero-card p{
+    margin-top:10px;
+    opacity:.9;
+    line-height:1.6;
+}
+
+.verified{
+    width:max-content;
+    max-width:100%;
+
+    margin:28px auto 0;
+
+    padding:12px 17px;
+
+    background:white;
+
+    color:var(--primary);
+
+    border-radius:12px;
+
+    font-weight:bold;
+}
+
+.floating-card{
+    position:absolute;
+
+    background:white;
+
+    padding:14px 18px;
+
+    border-radius:14px;
+
+    box-shadow:var(--shadow);
+
+    font-weight:bold;
+}
+
+.float-one{
+    left:-20px;
+    top:65px;
+}
+
+.float-two{
+    right:-20px;
+    bottom:65px;
+}
+
+/* =========================
+   SECTION TITLES
+========================= */
+
+.section-title{
+    max-width:760px;
+    margin:0 auto 48px;
+    text-align:center;
+}
+
+.section-tag{
+    display:inline-block;
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    background:#ecebff;
+
+    color:var(--primary);
+
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:1px;
+
+    margin-bottom:12px;
+}
+
+.section-title h2{
+    font-size:42px;
+    margin-bottom:13px;
+}
+
+.section-title h2 span{
+    color:var(--primary);
+}
+
+.section-title p{
+    color:var(--muted);
+    line-height:1.7;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+    background:white;
+}
+
+.service-tools{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+
+    margin-bottom:30px;
+}
+
+.service-search{
+    width:350px;
+
+    padding:14px 17px;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    background:#fafbff;
+
+    outline:none;
+}
+
+.filter-btn{
+    padding:13px 18px;
+
+    border:0;
+
+    border-radius:11px;
+
+    background:#ececff;
+
+    color:var(--primary);
+
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+.service-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:20px;
+}
+
+.service-card{
+    padding:26px 19px;
+
+    text-align:center;
+
+    background:linear-gradient(
+        145deg,
+        #fbfbff,
+        #f4f7ff
+    );
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+
+    background:white;
+
+    border-color:#cbcfff;
+
+    box-shadow:var(--shadow);
+}
+
+.service-icon{
+    width:75px;
+    height:75px;
+
+    margin:0 auto 17px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:22px;
+
+    background:linear-gradient(
+        135deg,
+        #e9e8ff,
+        #e8fbff
+    );
+
+    font-size:37px;
+}
+
+.service-card p{
+    margin-top:8px;
+
+    color:var(--muted);
+
+    font-size:14px;
+
+    line-height:1.55;
+}
+
+.price{
+    color:var(--primary);
+
+    font-weight:bold;
+
+    margin-top:12px;
+}
+
+/* =========================
+   PROFESSIONALS
+========================= */
+
+.professionals{
+    background:#f7f8ff;
+}
+
+.pro-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:24px;
+}
+
+.pro-card{
+    padding:26px;
+
+    border-radius:22px;
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    box-shadow:
+    0 12px 35px rgba(30,40,100,.05);
+
+    transition:.3s;
+}
+
+.pro-card:hover{
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow);
+}
+
+.pro-top{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.avatar{
+    width:65px;
+    height:65px;
+
+    border-radius:18px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:linear-gradient(
+        135deg,
+        #eeedff,
+        #e4faff
+    );
+
+    font-size:32px;
+}
+
+.pro-info p{
+    color:var(--muted);
+    margin-top:5px;
+}
+
+.rating{
+    margin-top:16px;
+    color:#ffad00;
+}
+
+.pro-meta{
+    display:flex;
+    justify-content:space-between;
+
+    margin:16px 0;
+
+    color:var(--muted);
+
+    font-size:14px;
+}
+
+.available{
+    color:#16a65c;
+    font-weight:bold;
+}
+
+.book-btn{
+    width:100%;
+
+    padding:13px;
+
+    border:0;
+
+    border-radius:11px;
+
+    color:white;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--blue)
+    );
+
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+/* =========================
+   HOW
+========================= */
+
+.how{
+    background:white;
+}
+
+.steps{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:24px;
+}
+
+.step{
+    padding:34px;
+
+    border-radius:21px;
+
+    border:1px solid var(--border);
+
+    background:#fafbff;
+
+    text-align:center;
+}
+
+.step-number{
+    width:60px;
+    height:60px;
+
+    margin:0 auto 19px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:18px;
+
+    color:white;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--cyan)
+    );
+
+    font-size:22px;
+    font-weight:bold;
+}
+
+.step p{
+    color:var(--muted);
+
+    margin-top:9px;
+
+    line-height:1.6;
+}
+
+/* =========================
+   OFFERS
+========================= */
+
+.offers{
+    background:#f7f8ff;
+}
+
+.offer-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:24px;
+}
+
+.offer{
+    min-height:200px;
+
+    padding:30px;
+
+    border-radius:23px;
+
+    color:white;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    box-shadow:
+    0 18px 40px rgba(30,40,120,.16);
+}
+
+.offer:nth-child(1){
+    background:linear-gradient(
+        135deg,
+        #5554ff,
+        #9b4cff
+    );
+}
+
+.offer:nth-child(2){
+    background:linear-gradient(
+        135deg,
+        #ff913c,
+        #ef477b
+    );
+}
+
+.offer:nth-child(3){
+    background:linear-gradient(
+        135deg,
+        #00a86b,
+        #00a1d7
+    );
+}
+
+.offer h3{
+    font-size:26px;
+}
+
+.offer p{
+    margin-top:7px;
+}
+
+.offer button{
+    width:max-content;
+
+    padding:10px 17px;
+
+    border:0;
+
+    border-radius:10px;
+
+    background:white;
+
+    color:#22283c;
+
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+/* =========================
+   REVIEWS
+========================= */
+
+.reviews{
+    background:white;
+}
+
+.review-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:24px;
+}
+
+.review{
+    padding:26px;
+
+    border-radius:21px;
+
+    background:#fafbff;
+
+    border:1px solid var(--border);
+
+    transition:.3s;
+}
+
+.review:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow);
+}
+
+.review-stars{
+    color:#ffad00;
+    margin-bottom:14px;
+}
+
+.review p{
+    color:var(--muted);
+    line-height:1.7;
+    margin-bottom:18px;
+}
+
+.reviewer{
+    font-weight:bold;
+}
+
+/* =========================
+   CONTACT + MAP
+========================= */
+
+.contact-section{
+    background:
+    radial-gradient(
+        circle at 5% 20%,
+        rgba(98,87,255,.09),
+        transparent 25%
+    ),
+    #f7f8ff;
+}
+
+.contact-grid{
+    display:grid;
+
+    grid-template-columns:
+    .9fr 1.1fr;
+
+    gap:30px;
+}
+
+.contact-card,
+.map-card{
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+}
+
+.contact-card{
+    padding:30px;
+}
+
+.contact-card h3{
+    font-size:29px;
+    margin-bottom:10px;
+}
+
+.contact-intro{
+    color:var(--muted);
+
+    line-height:1.7;
+
+    margin-bottom:22px;
+}
+
+.contact-item{
+    display:flex;
+
+    gap:13px;
+
+    align-items:center;
+
+    padding:14px;
+
+    background:#f7f8ff;
+
+    border-radius:14px;
+
+    margin-bottom:12px;
+}
+
+.contact-icon{
+    width:45px;
+    height:45px;
+
+    flex:0 0 45px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:13px;
+
+    color:white;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--cyan)
+    );
+
+    font-size:19px;
+}
+
+.contact-item strong{
+    display:block;
+    margin-bottom:4px;
+}
+
+.contact-item a,
+.contact-item span{
+    color:var(--muted);
+
+    font-size:14px;
+
+    text-decoration:none;
+}
+
+.social-buttons{
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:11px;
+
+    margin-top:20px;
+}
+
+.instagram-btn,
+.facebook-btn{
+    padding:14px;
+
+    border-radius:12px;
+
+    color:white;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    font-weight:bold;
+}
+
+.instagram-btn{
+    background:linear-gradient(
+        135deg,
+        #833ab4,
+        #fd1d1d,
+        #fcb045
+    );
+}
+
+.facebook-btn{
+    background:#1877f2;
+}
+
+/* MAP FIX */
+
+.map-card{
+    overflow:hidden;
+    position:relative;
+}
+
+.map-header{
+    padding:20px 22px;
+
+    border-bottom:
+    1px solid var(--border);
+}
+
+.map-header h3{
+    margin-bottom:5px;
+}
+
+.map-header p{
+    color:var(--muted);
+
+    font-size:14px;
+}
+
+.map-wrapper{
+    width:100%;
+    height:430px;
+
+    position:relative;
+
+    background:#edf1ff;
+}
+
+.map-wrapper iframe{
+    display:block;
+
+    width:100%;
+    height:100%;
+
+    border:0;
+}
+
+.map-footer{
+    padding:17px 20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+}
+
+.map-footer p{
+    color:var(--muted);
+
+    font-size:14px;
+}
+
+.open-map-btn{
+    text-decoration:none;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--blue)
+    );
+
+    color:white;
+
+    padding:12px 17px;
+
+    border-radius:11px;
+
+    font-weight:bold;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    margin:70px 6%;
+
+    padding:70px 30px;
+
+    text-align:center;
+
+    color:white;
+
+    border-radius:30px;
+
+    background:
+    radial-gradient(
+        circle at 10% 20%,
+        rgba(255,255,255,.22),
+        transparent 25%
+    ),
+    linear-gradient(
+        135deg,
+        #5554ff,
+        #3575e8,
+        #12a7c4
+    );
+
+    box-shadow:
+    0 30px 70px rgba(60,70,190,.22);
+}
+
+.cta h2{
+    font-size:42px;
+    margin-bottom:13px;
+}
+
+.cta p{
+    opacity:.9;
+    margin-bottom:24px;
+}
+
+.cta-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.cta button,
+.cta a{
+    border:0;
+
+    padding:14px 25px;
+
+    border-radius:11px;
+
+    font-weight:bold;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    text-decoration:none;
+}
+
+.cta button{
+    background:white;
+    color:var(--primary);
+}
+
+.cta a{
+    background:#25d366;
+    color:white;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:60px 6% 24px;
+
+    background:#11162a;
+
+    color:white;
+}
+
+.footer-grid{
+    display:grid;
+
+    grid-template-columns:
+    2fr 1fr 1fr 1.3fr;
+
+    gap:38px;
+}
+
+.footer-logo{
+    font-size:30px;
+    font-weight:900;
+}
+
+.footer-logo span{
+    color:var(--orange);
+}
+
+footer p{
+    color:#aeb6c8;
+
+    line-height:1.7;
+
+    margin-top:11px;
+}
+
+footer h4{
+    margin-bottom:15px;
+}
+
+footer a{
+    display:block;
+
+    color:#cad0df;
+
+    text-decoration:none;
+
+    margin-bottom:10px;
+}
+
+footer a:hover{
+    color:white;
+}
+
+.footer-socials{
+    display:flex;
+
+    gap:10px;
+
+    margin-top:18px;
+}
+
+.footer-socials a{
+    width:42px;
+    height:42px;
+
+    margin:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#1b2239;
+
+    border-radius:12px;
+}
+
+.copyright{
+    margin-top:38px;
+
+    padding-top:20px;
+
+    border-top:1px solid #293248;
+
+    text-align:center;
+
+    color:#919aaf;
+}
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.floating-whatsapp{
+    position:fixed;
+
+    right:22px;
+    bottom:22px;
+
+    z-index:1800;
+
+    width:60px;
+    height:60px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+
+    background:#25d366;
+
+    color:white;
+
+    font-size:28px;
+
+    box-shadow:
+    0 15px 35px rgba(37,211,102,.35);
+
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+
+    0%{
+        box-shadow:
+        0 0 0 0 rgba(37,211,102,.35);
+    }
+
+    70%{
+        box-shadow:
+        0 0 0 15px rgba(37,211,102,0);
+    }
+
+    100%{
+        box-shadow:
+        0 0 0 0 rgba(37,211,102,0);
+    }
+
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal{
+    position:fixed;
+
+    inset:0;
+
+    z-index:3000;
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:20px;
+
+    background:rgba(10,15,30,.70);
+
+    backdrop-filter:blur(8px);
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-box{
+    width:100%;
+    max-width:530px;
+
+    max-height:92vh;
+
+    overflow:auto;
+
+    padding:30px;
+
+    background:white;
+
+    border-radius:24px;
+
+    position:relative;
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.28);
+}
+
+.close{
+    position:absolute;
+
+    right:20px;
+    top:15px;
+
+    font-size:28px;
+
+    cursor:pointer;
+}
+
+.modal-box h2{
+    margin-bottom:22px;
+}
+
+.form-group{
+    margin-bottom:14px;
+}
+
+.form-group label{
+    display:block;
+
+    margin-bottom:7px;
+
+    font-weight:bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+
+    padding:13px;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    background:#fafbff;
+
+    outline:none;
+}
+
+.form-group textarea{
+    height:85px;
+    resize:vertical;
+}
+
+.confirm-btn{
+    width:100%;
+
+    padding:14px;
+
+    border:0;
+
+    border-radius:11px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--blue)
+    );
+
+    color:white;
+
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+/* =========================
+   TOAST
+========================= */
+
+.toast{
+    position:fixed;
+
+    left:50%;
+    bottom:26px;
+
+    transform:translateX(-50%);
+
+    z-index:4000;
+
+    display:none;
+
+    padding:14px 20px;
+
+    border-radius:11px;
+
+    background:#172033;
+
+    color:white;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.2);
+}
+
+.toast.show{
+    display:block;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark{
+    --text:#f2f4ff;
+    --muted:#aab3c5;
+    --border:#2a354b;
+
+    background:#0a1020;
+}
+
+body.dark nav{
+    background:rgba(13,19,36,.93);
+}
+
+body.dark .hero{
+    background:
+    radial-gradient(
+        circle at 85% 20%,
+        rgba(98,87,255,.18),
+        transparent 30%
+    ),
+    linear-gradient(
+        135deg,
+        #111a31,
+        #0a1020
+    );
+}
+
+body.dark .services,
+body.dark .how,
+body.dark .reviews{
+    background:#0e1528;
+}
+
+body.dark .professionals,
+body.dark .offers,
+body.dark .contact-section{
+    background:#0a1020;
+}
+
+body.dark .service-card,
+body.dark .pro-card,
+body.dark .step,
+body.dark .review,
+body.dark .contact-card,
+body.dark .map-card,
+body.dark .modal-box{
+    background:#151e31;
+    border-color:#29344a;
+}
+
+body.dark .contact-item,
+body.dark .service-search,
+body.dark .form-group input,
+body.dark .form-group select,
+body.dark .form-group textarea{
+    background:#10182b;
+    color:white;
+}
+
+body.dark .theme-btn,
+body.dark .menu-btn{
+    background:#151e31;
+    color:white;
+    border-color:#29344a;
+}
+
+body.dark .map-header,
+body.dark .map-footer{
+    background:#151e31;
+}
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media(max-width:1050px){
+
+    .nav-links{
+        position:absolute;
+
+        top:75px;
+        left:5%;
+        right:5%;
+
+        display:none;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:2px;
+
+        padding:15px;
+
+        background:white;
+
+        border:1px solid var(--border);
+
+        border-radius:18px;
+
+        box-shadow:var(--shadow);
+    }
+
+    .nav-links.open{
+        display:flex;
+    }
+
+    .nav-links li a{
+        display:block;
+        padding:12px;
+    }
+
+    body.dark .nav-links{
+        background:#151e31;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+
+        text-align:center;
+    }
+
+    .hero-content > p{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-buttons,
+    .hero-stats{
+        justify-content:center;
+    }
+
+    .service-grid{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:
+        1fr 1fr;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:650px){
+
+    nav{
+        padding:13px 5%;
+    }
+
+    .logo{
+        font-size:23px;
+    }
+
+    .logo-wrap small{
+        display:none;
+    }
+
+    .nav-btn{
+        display:none;
+    }
+
+    section{
+        padding:62px 5%;
+    }
+
+    .hero{
+        padding:60px 5%;
+        min-height:auto;
+    }
+
+    .hero h1{
+        font-size:45px;
+        letter-spacing:-2px;
+    }
+
+    .hero-content > p{
+        font-size:16px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .primary-btn,
+    .whatsapp-btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .float-one,
+    .float-two{
+        display:none;
+    }
+
+    .hero-card{
+        min-height:390px;
+    }
+
+    .section-title h2{
+        font-size:32px;
+    }
+
+    .service-tools{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .service-search{
+        width:100%;
+    }
+
+    .service-grid,
+    .pro-grid,
+    .steps,
+    .offer-grid,
+    .review-grid{
+        grid-template-columns:1fr;
+    }
+
+    .social-buttons{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cta{
+        margin:40px 5%;
+
+        padding:52px 20px;
+    }
+
+    .cta h2{
+        font-size:31px;
+    }
+
+    .map-wrapper{
+        height:350px;
+    }
+
+}
+
+/* =========================
+   LARGE / LED
+========================= */
+
+@media(min-width:1600px){
+
+    nav,
+    section{
+        padding-left:10%;
+        padding-right:10%;
+    }
+
+    .hero{
+        min-height:760px;
+    }
+
+    body{
+        font-size:18px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo-wrap">
+
+        <div class="logo-icon">
+            🛠
+        </div>
+
+        <div>
+
+            <div class="logo">
+                Quick<span>Fix</span>
+            </div>
+
+            <small>
+                TECHNICIAN & REPAIR SERVICES
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <ul class="nav-links" id="navLinks">
+
+        <li>
+            <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#services">Services</a>
+        </li>
+
+        <li>
+            <a href="#professionals">
+                Professionals
+            </a>
+        </li>
+
+        <li>
+            <a href="#offers">Offers</a>
+        </li>
+
+        <li>
+            <a href="#reviews">Reviews</a>
+        </li>
+
+        <li>
+            <a href="#location">Location</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+
+    </ul>
+
+
+    <div class="nav-actions">
+
+        <button
+            class="theme-btn"
+            onclick="toggleTheme()"
+        >
+            🌙
+        </button>
+
+
+        <a
+            href="#services"
+            class="nav-btn"
+        >
+            Book Repair
+        </a>
+
+
+        <button
+            class="menu-btn"
+            onclick="toggleMenu()"
+        >
+            ☰
+        </button>
+
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <span class="badge">
+            ⚡ Fast • Reliable • Nearby
+        </span>
+
+
+        <h1>
+
+            Your Problem.
+
+            <span>
+                Our Fix.
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            QuickFix provides convenient
+            technician and repair services
+            for homes, offices, devices and
+            vehicles around Karachi.
+
+            Find a service, book a technician
+            and continue directly through
+            WhatsApp.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="#services"
+                class="primary-btn"
+            >
+                Explore Services →
+            </a>
+
+
+            <a
+                href="https://wa.me/923482934535?text=Hello%20QuickFix!%20I%20need%20a%20repair%20service."
+                target="_blank"
+                class="whatsapp-btn"
+            >
+                ☎ WhatsApp Us
+            </a>
+
+        </div>
+
+
+        <div class="hero-stats">
+
+            <div class="stat">
+
+                <strong>
+                    16+
+                </strong>
+
+                <small>
+                    Repair Services
+                </small>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>
+                    Karachi
+                </strong>
+
+                <small>
+                    Service Area
+                </small>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>
+                    4.9 ⭐
+                </strong>
+
+                <small>
+                    Customer Rating
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-visual">
+
+        <div
+            class="hero-card"
+            id="heroCard"
+        >
+
+            <div class="worker">
+                🧑‍🔧
+            </div>
+
+            <h2>
+                QuickFix Professionals
+            </h2>
+
+            <p>
+
+                Skilled technicians,
+                simple booking and
+                convenient communication.
+
+            </p>
+
+            <div class="verified">
+                ✓ Reliable Repair Support
+            </div>
+
+        </div>
+
+
+        <div class="floating-card float-one">
+            ⭐ 4.9 Rated
+        </div>
+
+        <div class="floating-card float-two">
+            🟢 Karachi Service
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+    <div class="section-title">
+
+        <span class="section-tag">
+            OUR SERVICES
+        </span>
+
+        <h2>
+
+            Explore QuickFix
+
+            <span>
+                Services
+            </span>
+
+        </h2>
+
+        <p>
+
+            Click any service to open
+            the technician booking form.
+
+        </p>
+
+    </div>
+
+
+    <div class="service-tools">
+
+        <input
+            class="service-search"
+            id="serviceFilter"
+            onkeyup="filterServices()"
+            placeholder="🔍 Search services..."
+        >
+
+        <button
+            class="filter-btn"
+            onclick="showAllServices()"
+        >
+            Show All Services
+        </button>
+
+    </div>
+
+
+    <div class="service-grid">
+
+        <div
+            class="service-card"
+            data-name="plumber plumbing"
+            onclick="openBooking('Plumber')"
+        >
+            <div class="service-icon">🔧</div>
+            <h3>Plumber</h3>
+            <p>Pipe, tap, leakage and water repairs.</p>
+            <div class="price">From Rs. 800</div>
+        </div>
+
+
+        <div
+            class="service-card"
+            data-name="electrician electrical"
+            onclick="openBooking('Electrician')"
+        >
+            <div class="service-icon">⚡</div>
+            <h3>Electrician</h3>
+            <p>Wiring, switches and electrical repairs.</p>
+            <div class="price">From Rs. 700</div>
+        </div>
+
+
+        <div
+            class="service-card"
+            data-name="ac technician"
+            onclick="openBooking('AC Technician')"
+        >
+            <div class="service-icon">❄️</div>
+            <h3>AC Technician</h3>
+            <p>AC service, repair and installation.</p>
+            <div class="price">From Rs. 1,200</div>
+        </div>
+
+
+        <div
+            class="service-card"
+            data-name="home cleaning"
+            onclick="openBooking('Home Cleaning')"
+        >
+            <div class="service-icon">🧹</div>
+            <h3>Home Cleaning</h3>
+            <p>Professional home and office cleaning.</p>
+            <div class="price">From Rs. 1,500</div>
+        </div>
+
+
+        <div
+            class="service-card"
+            data-name="carpenter wood"
+            onclick="openBooking('Carpenter')"
+        >
+            <div class="service-icon">🔨</div>
+            <h3>Carpenter</h3>
+            <p>Furniture, doors and woodwork.</p>
+            <div class="price">From Rs. 1,000</div>
+        </div>
+
+
+        <div
+            class="service-card"
+            data-name="painter painting"
+            onclick="openBooking('Painter')"
+        >
+            <div class="service-icon">🎨</div>
+            <h3>Painter</h3>
+            <p>Wall and home painting services.</p>
+            <div class="price">From Rs. 2,000</div>
+        </div>
+
+
+        <div
+            class="service-card"
+            data-name="car mechanic"
+            onclick="openBooking('Car Mechanic')"
+        >
+            <div class="service-icon">🚗</div>
+            <h3>Car Mechanic</h3>
+            <p>Car inspection, maintenance and repair.</p>
+            <div class="price">From Rs. 1,000</div>
+        </div>
+
+
+        <div
+            class="service-card"
+            data-name="bike mechanic"
+            onclick="openBooking('Bike Mechanic')"
+        >
+            <div class="service-icon">🏍️</div>
+            <h3>Bike Mechanic</h3>
+            <p>Bike repair and maintenance.</p>
+            <div class="price">From Rs. 500</div>
+        </div>
+
+
+        <div
+            class="service-card"
+            data-name="computer laptop pc"
+            onclick="openBooking('Computer Repair')"
+        >
+            <div class="service-icon">💻</div>
+            <h3>Computer Repair</h3>
+            <p>Laptop, PC and software support.</p>
+            <div class="price">From Rs. 1,000</div>
+        </div>
+
+
+        <div
+            class="service-card"
+            data-name="mobile phone repair"
+            onclick="openBooking('Mobile Repair')"
+        >
+            <div class="service-icon">📱</div>
+            <h3>Mobile Repair</h3>
+            <p>Screen, battery and software repairs.</p>
+            <div class="price">From Rs. 800</div>
+        </div>
+
+
+        <div
+            class="service-card"
+            data-name="washing machine"
+            onclick="openBooking('Washing Machine Repair')"
+        >
+            <div class="service-icon">🧺</div>
+            <h3>Washing Machine</h3>
+            <p>Repair and maintenance support.</p>
+            <div class="price">From Rs. 900</div>
+        </div>
+
+
+        <div
+            class="service-card"
+            data-name="refrigerator fridge"
+            onclick="openBooking('Refrigerator Repair')"
+        >
+            <div class="service-icon">🧊</div>
+            <h3>Refrigerator</h3>
+            <p>Cooling and refrigerator repair.</p>
+            <div class="price">From Rs. 900</div>
+        </div>
+
+
+        <div
+            class="service-card"
+            data-name="tv led lcd"
+            onclick="openBooking('TV Repair')"
+        >
+            <div class="service-icon">📺</div>
+            <h3>TV Repair</h3>
+            <p>LED, LCD and smart TV repair.</p>
+            <div class="price">From Rs. 1,000</div>
+        </div>
+
+
+        <div
+            class="service-card"
+            data-name="pest control"
+            onclick="openBooking('Pest Control')"
+        >
+            <div class="service-icon">🐜</div>
+            <h3>Pest Control</h3>
+            <p>Pest treatment for homes and offices.</p>
+            <div class="price">From Rs. 1,500</div>
+        </div>
+
+
+        <div
+            class="service-card"
+            data-name="sofa carpet cleaning"
+            onclick="openBooking('Sofa Cleaning')"
+        >
+            <div class="service-icon">🛋️</div>
+            <h3>Sofa Cleaning</h3>
+            <p>Deep sofa and carpet cleaning.</p>
+            <div class="price">From Rs. 1,200</div>
+        </div>
+
+
+        <div
+            class="service-card"
+            data-name="moving shifting"
+            onclick="openBooking('Moving & Shifting')"
+        >
+            <div class="service-icon">📦</div>
+            <h3>Moving & Shifting</h3>
+            <p>Home and office shifting services.</p>
+            <div class="price">From Rs. 3,000</div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROFESSIONALS -->
+
+<section
+    class="professionals"
+    id="professionals"
+>
+
+    <div class="section-title">
+
+        <span class="section-tag">
+            OUR TEAM
+        </span>
+
+        <h2>
+
+            QuickFix
+
+            <span>
+                Professionals
+            </span>
+
+        </h2>
+
+        <p>
+            Find a professional according
+            to your required service.
+        </p>
+
+    </div>
+
+
+    <div class="pro-grid">
+
+        <div class="pro-card">
+
+            <div class="pro-top">
+
+                <div class="avatar">
+                    👨‍🔧
+                </div>
+
+                <div class="pro-info">
+                    <h3>Ali Ahmed</h3>
+                    <p>Plumbing Technician</p>
+                </div>
+
+            </div>
+
+            <div class="rating">
+                ⭐⭐⭐⭐⭐ 4.9
+            </div>
+
+            <div class="pro-meta">
+                <span>📍 Karachi</span>
+                <span class="available">● Available</span>
+            </div>
+
+            <button
+                class="book-btn"
+                onclick="openBooking('Plumber')"
+            >
+                Book Technician
+            </button>
+
+        </div>
+
+
+        <div class="pro-card">
+
+            <div class="pro-top">
+
+                <div class="avatar">
+                    👨‍🔧
+                </div>
+
+                <div class="pro-info">
+                    <h3>Usman Khan</h3>
+                    <p>Electrical Technician</p>
+                </div>
+
+            </div>
+
+            <div class="rating">
+                ⭐⭐⭐⭐⭐ 4.8
+            </div>
+
+            <div class="pro-meta">
+                <span>📍 Karachi</span>
+                <span class="available">● Available</span>
+            </div>
+
+            <button
+                class="book-btn"
+                onclick="openBooking('Electrician')"
+            >
+                Book Technician
+            </button>
+
+        </div>
+
+
+        <div class="pro-card">
+
+            <div class="pro-top">
+
+                <div class="avatar">
+                    👨‍🔧
+                </div>
+
+                <div class="pro-info">
+                    <h3>Hamza Malik</h3>
+                    <p>AC Technician</p>
+                </div>
+
+            </div>
+
+            <div class="rating">
+                ⭐⭐⭐⭐⭐ 4.9
+            </div>
+
+            <div class="pro-meta">
+                <span>📍 Karachi</span>
+                <span class="available">● Available</span>
+            </div>
+
+            <button
+                class="book-btn"
+                onclick="openBooking('AC Technician')"
+            >
+                Book Technician
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HOW -->
+
+<section class="how">
+
+    <div class="section-title">
+
+        <span class="section-tag">
+            SIMPLE PROCESS
+        </span>
+
+        <h2>
+
+            How
+
+            <span>
+                QuickFix
+            </span>
+
+            Works
+
+        </h2>
+
+    </div>
+
+
+    <div class="steps">
+
+        <div class="step">
+
+            <div class="step-number">
+                1
+            </div>
+
+            <h3>
+                Choose Service
+            </h3>
+
+            <p>
+                Select the technician
+                service you require.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                2
+            </div>
+
+            <h3>
+                Enter Details
+            </h3>
+
+            <p>
+                Fill your booking
+                details and problem.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                3
+            </div>
+
+            <h3>
+                Send on WhatsApp
+            </h3>
+
+            <p>
+                Your complete request
+                opens directly in WhatsApp.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- OFFERS -->
+
+<section class="offers" id="offers">
+
+    <div class="section-title">
+
+        <span class="section-tag">
+            SPECIAL DEALS
+        </span>
+
+        <h2>
+
+            QuickFix
+
+            <span>
+                Offers
+            </span>
+
+        </h2>
+
+    </div>
+
+
+    <div class="offer-grid">
+
+        <div class="offer">
+
+            <div>
+                <h3>20% OFF</h3>
+                <p>First Service Booking</p>
+            </div>
+
+            <button
+                onclick="applyCoupon('FIRST20')"
+            >
+                Use FIRST20
+            </button>
+
+        </div>
+
+
+        <div class="offer">
+
+            <div>
+                <h3>Rs. 500 OFF</h3>
+                <p>Home Cleaning Service</p>
+            </div>
+
+            <button
+                onclick="applyCoupon('CLEAN500')"
+            >
+                Use CLEAN500
+            </button>
+
+        </div>
+
+
+        <div class="offer">
+
+            <div>
+                <h3>Free Inspection</h3>
+                <p>Selected Repair Services</p>
+            </div>
+
+            <button
+                onclick="applyCoupon('FREECHECK')"
+            >
+                Claim Offer
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- REVIEWS -->
+
+<section class="reviews" id="reviews">
+
+    <div class="section-title">
+
+        <span class="section-tag">
+            REVIEWS
+        </span>
+
+        <h2>
+
+            What Our
+
+            <span>
+                Customers Say
+            </span>
+
+        </h2>
+
+    </div>
+
+
+    <div class="review-grid">
+
+        <div class="review">
+
+            <div class="review-stars">
+                ⭐⭐⭐⭐⭐
+            </div>
+
+            <p>
+
+                "QuickFix made it very
+                easy to book an AC
+                technician. The process
+                was simple and fast."
+
+            </p>
+
+            <div class="reviewer">
+                — Ahmed R.
+            </div>
+
+        </div>
+
+
+        <div class="review">
+
+            <div class="review-stars">
+                ⭐⭐⭐⭐⭐
+            </div>
+
+            <p>
+
+                "The booking process
+                was easy and I could
+                directly communicate
+                through WhatsApp."
+
+            </p>
+
+            <div class="reviewer">
+                — Sana K.
+            </div>
+
+        </div>
+
+
+        <div class="review">
+
+            <div class="review-stars">
+                ⭐⭐⭐⭐⭐
+            </div>
+
+            <p>
+
+                "I needed an electrician
+                urgently and QuickFix
+                helped me select the
+                service quickly."
+
+            </p>
+
+            <div class="reviewer">
+                — Bilal M.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LOCATION -->
+
+<section
+    class="contact-section"
+    id="location"
+>
+
+    <div class="section-title">
+
+        <span class="section-tag">
+            LOCATION & CONTACT
+        </span>
+
+        <h2>
+
+            Find
+
+            <span>
+                QuickFix
+            </span>
+
+        </h2>
+
+        <p>
+
+            Our project location is
+            Iqra University Main Campus,
+            Karachi.
+
+        </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+
+        <!-- CONTACT CARD -->
+
+        <div
+            class="contact-card"
+            id="contact"
+        >
+
+            <h3>
+                Contact QuickFix
+            </h3>
+
+            <p class="contact-intro">
+
+                Contact us for technician
+                and repair services.
+
+            </p>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    ☎
+                </div>
+
+                <div>
+
+                    <strong>
+                        Phone Number
+                    </strong>
+
+                    <a href="tel:+923482934535">
+                        0348 2934535
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    🟢
+                </div>
+
+                <div>
+
+                    <strong>
+                        WhatsApp
+                    </strong>
+
+                    <a
+                        href="https://wa.me/923482934535?text=Hello%20QuickFix!"
+                        target="_blank"
+                    >
+                        0348 2934535
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    📍
+                </div>
+
+                <div>
+
+                    <strong>
+                        Location
+                    </strong>
+
+                    <span>
+
+                        Iqra University
+                        Main Campus,
+                        Karachi
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    📸
+                </div>
+
+                <div>
+
+                    <strong>
+                        Instagram
+                    </strong>
+
+                    <a
+                        href="https://www.instagram.com/quickfix.com/"
+                        target="_blank"
+                    >
+                        quickfix.com
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    👍
+                </div>
+
+                <div>
+
+                    <strong>
+                        Facebook
+                    </strong>
+
+                    <a
+                        href="https://www.facebook.com/quickfix.com"
+                        target="_blank"
+                    >
+                        quickfix.com
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="social-buttons">
+
+                <a
+                    href="https://www.instagram.com/quickfix.com/"
+                    target="_blank"
+                    class="instagram-btn"
+                >
+                    📸 Instagram
+                </a>
+
+
+                <a
+                    href="https://www.facebook.com/quickfix.com"
+                    target="_blank"
+                    class="facebook-btn"
+                >
+                    👍 Facebook
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- FIXED GOOGLE MAP -->
+
+        <div class="map-card">
+
+            <div class="map-header">
+
+                <h3>
+                    📍 Iqra University
+                </h3>
+
+                <p>
+
+                    Iqra University Main Campus,
+                    Karachi
+
+                </p>
+
+            </div>
+
+
+            <div class="map-wrapper">
+
+                <iframe
+                    src="https://maps.google.com/maps?q=Iqra%20University%20Main%20Campus%20Karachi&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                    title="Iqra University Main Campus Karachi"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+            </div>
+
+
+            <div class="map-footer">
+
+                <p>
+
+                    If the map does not load,
+                    use the button to open
+                    Google Maps directly.
+
+                </p>
+
+
+                <a
+                    class="open-map-btn"
+                    href="https://www.google.com/maps/search/?api=1&query=Iqra+University+Main+Campus+Karachi"
+                    target="_blank"
+                >
+
+                    📍 Open in Google Maps
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <h2>
+        Need a Professional?
+    </h2>
+
+    <p>
+
+        Book a QuickFix technician
+        and send your complete request
+        directly through WhatsApp.
+
+    </p>
+
+
+    <div class="cta-buttons">
+
+        <button
+            onclick="openBooking('General Service')"
+        >
+            🚀 Book a Technician
+        </button>
+
+
+        <a
+            href="https://wa.me/923482934535?text=Hello%20QuickFix!%20I%20need%20a%20technician."
+            target="_blank"
+        >
+            🟢 WhatsApp QuickFix
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+
+            <div class="footer-logo">
+                Quick<span>Fix</span>
+            </div>
+
+            <p>
+
+                Technician and repair
+                services for homes,
+                offices, devices and
+                vehicles around Karachi.
+
+            </p>
+
+
+            <div class="footer-socials">
+
+                <a
+                    href="https://www.instagram.com/quickfix.com/"
+                    target="_blank"
+                >
+                    📸
+                </a>
+
+                <a
+                    href="https://www.facebook.com/quickfix.com"
+                    target="_blank"
+                >
+                    👍
+                </a>
+
+                <a
+                    href="https://wa.me/923482934535"
+                    target="_blank"
+                >
+                    🟢
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Quick Links
+            </h4>
+
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#professionals">Professionals</a>
+            <a href="#reviews">Reviews</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Services
+            </h4>
+
+            <a href="#services">Electrician</a>
+            <a href="#services">AC Repair</a>
+            <a href="#services">Computer Repair</a>
+            <a href="#services">Mobile Repair</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Contact
+            </h4>
+
+            <a href="tel:+923482934535">
+                ☎ 0348 2934535
+            </a>
+
+            <a
+                href="https://wa.me/923482934535"
+                target="_blank"
+            >
+                🟢 WhatsApp
+            </a>
+
+            <a href="#location">
+                📍 Iqra University, Karachi
+            </a>
+
+            <a
+                href="https://www.instagram.com/quickfix.com/"
+                target="_blank"
+            >
+                Instagram: quickfix.com
+            </a>
+
+            <a
+                href="https://www.facebook.com/quickfix.com"
+                target="_blank"
+            >
+                Facebook: quickfix.com
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 QuickFix.
+        All Rights Reserved.
+
+        <br><br>
+
+        Project-Based Examination –
+        Web Development
+
+    </div>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+    class="floating-whatsapp"
+    href="https://wa.me/923482934535?text=Hello%20QuickFix!%20I%20need%20repair%20assistance."
+    target="_blank"
+    title="WhatsApp QuickFix"
+>
+    ☎
+</a>
+
+
+<!-- BOOKING MODAL -->
+
+<div
+    class="modal"
+    id="bookingModal"
+>
+
+    <div class="modal-box">
+
+        <span
+            class="close"
+            onclick="closeBooking()"
+        >
+            ×
+        </span>
+
+
+        <h2>
+            Book QuickFix Service 🛠
+        </h2>
+
+
+        <form onsubmit="confirmBooking(event)">
+
+            <div class="form-group">
+
+                <label>
+                    Selected Service
+                </label>
+
+                <select
+                    id="selectedService"
+                    required
+                >
+
+                    <option>
+                        General Service
+                    </option>
+
+                    <option>
+                        Plumber
+                    </option>
+
+                    <option>
+                        Electrician
+                    </option>
+
+                    <option>
+                        AC Technician
+                    </option>
+
+                    <option>
+                        Home Cleaning
+                    </option>
+
+                    <option>
+                        Carpenter
+                    </option>
+
+                    <option>
+                        Painter
+                    </option>
+
+                    <option>
+                        Car Mechanic
+                    </option>
+
+                    <option>
+                        Bike Mechanic
+                    </option>
+
+                    <option>
+                        Computer Repair
+                    </option>
+
+                    <option>
+                        Mobile Repair
+                    </option>
+
+                    <option>
+                        Washing Machine Repair
+                    </option>
+
+                    <option>
+                        Refrigerator Repair
+                    </option>
+
+                    <option>
+                        TV Repair
+                    </option>
+
+                    <option>
+                        Pest Control
+                    </option>
+
+                    <option>
+                        Sofa Cleaning
+                    </option>
+
+                    <option>
+                        Moving & Shifting
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Your Name
+                </label>
+
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Enter your name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="03XX XXXXXXX"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Preferred Date
+                </label>
+
+                <input
+                    type="date"
+                    id="date"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Preferred Time
+                </label>
+
+                <select
+                    id="time"
+                    required
+                >
+
+                    <option value="">
+                        Select Time
+                    </option>
+
+                    <option>09:00 AM</option>
+                    <option>11:00 AM</option>
+                    <option>01:00 PM</option>
+                    <option>03:00 PM</option>
+                    <option>05:00 PM</option>
+                    <option>07:00 PM</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Address
+                </label>
+
+                <textarea
+                    id="address"
+                    placeholder="Enter your complete address"
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Problem Details
+                </label>
+
+                <textarea
+                    id="problem"
+                    placeholder="Describe your repair problem"
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <button
+                class="confirm-btn"
+                type="submit"
+            >
+                Confirm & Send on WhatsApp
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- TOAST -->
+
+<div
+    class="toast"
+    id="toast"
+>
+</div>
+
+
+<script>
+
+/* =========================
+   DOM EVENT
+========================= */
+
+document.addEventListener(
+"DOMContentLoaded",
+function(){
+
+    const today =
+    new Date()
+    .toISOString()
+    .split("T")[0];
+
+    document
+    .getElementById("date")
+    .setAttribute(
+        "min",
+        today
+    );
+
+
+    if(
+        localStorage.getItem(
+            "quickfixDarkMode"
+        ) === "true"
+    ){
+
+        document.body
+        .classList
+        .add("dark");
+
+        document
+        .querySelector(".theme-btn")
+        .innerText = "☀️";
+
+    }
+
+});
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+function toggleMenu(){
+
+    document
+    .getElementById("navLinks")
+    .classList
+    .toggle("open");
+
+}
+
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link){
+
+    link.addEventListener(
+    "click",
+    function(){
+
+        document
+        .getElementById("navLinks")
+        .classList
+        .remove("open");
+
+    });
+
+});
+
+
+/* =========================
+   SERVICE FILTER
+========================= */
+
+function filterServices(){
+
+    const input =
+    document
+    .getElementById("serviceFilter")
+    .value
+    .toLowerCase();
+
+
+    const cards =
+    document
+    .querySelectorAll(".service-card");
+
+
+    cards.forEach(function(card){
+
+        const name =
+        card.dataset.name
+        .toLowerCase();
+
+        if(name.includes(input)){
+
+            card.style.display = "";
+
+        }else{
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+function showAllServices(){
+
+    document
+    .getElementById("serviceFilter")
+    .value = "";
+
+
+    document
+    .querySelectorAll(".service-card")
+    .forEach(function(card){
+
+        card.style.display = "";
+
+    });
+
+
+    showToast(
+        "All QuickFix services are showing ✓"
+    );
+
+}
+
+
+/* =========================
+   BOOKING
+========================= */
+
+function openBooking(service){
+
+    document
+    .getElementById("bookingModal")
+    .classList
+    .add("active");
+
+
+    document
+    .getElementById("selectedService")
+    .value = service;
+
+}
+
+
+function closeBooking(){
+
+    document
+    .getElementById("bookingModal")
+    .classList
+    .remove("active");
+
+}
+
+
+/* =========================
+   WHATSAPP BOOKING
+========================= */
+
+function confirmBooking(event){
+
+    event.preventDefault();
+
+
+    const service =
+    document
+    .getElementById("selectedService")
+    .value;
+
+
+    const name =
+    document
+    .getElementById("customerName")
+    .value
+    .trim();
+
+
+    const phone =
+    document
+    .getElementById("phone")
+    .value
+    .trim();
+
+
+    const date =
+    document
+    .getElementById("date")
+    .value;
+
+
+    const time =
+    document
+    .getElementById("time")
+    .value;
+
+
+    const address =
+    document
+    .getElementById("address")
+    .value
+    .trim();
+
+
+    const problem =
+    document
+    .getElementById("problem")
+    .value
+    .trim();
+
+
+    if(phone.length < 10){
+
+        showToast(
+            "Please enter a valid phone number."
+        );
+
+        return;
+
+    }
+
+
+    const booking = {
+
+        name:name,
+        phone:phone,
+        service:service,
+        date:date,
+        time:time,
+        address:address,
+        problem:problem
+
+    };
+
+
+    localStorage.setItem(
+
+        "quickfixBooking",
+
+        JSON.stringify(booking)
+
+    );
+
+
+    const message =
+
+`Hello QuickFix!
+
+I want to book a service.
+
+Name: ${name}
+
+Customer Phone: ${phone}
+
+Service: ${service}
+
+Preferred Date: ${date}
+
+Preferred Time: ${time}
+
+Address: ${address}
+
+Problem:
+${problem}
+
+Please confirm my booking.`;
+
+
+    const whatsappURL =
+
+    "https://wa.me/923482934535?text="
+
+    +
+
+    encodeURIComponent(message);
+
+
+    showToast(
+        "Opening QuickFix WhatsApp..."
+    );
+
+
+    setTimeout(function(){
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
+    },400);
+
+
+    closeBooking();
+
+}
+
+
+/* =========================
+   COUPONS
+========================= */
+
+function applyCoupon(code){
+
+    localStorage.setItem(
+        "quickfixCoupon",
+        code
+    );
+
+    showToast(
+        "Coupon " +
+        code +
+        " applied successfully 🎁"
+    );
+
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+function toggleTheme(){
+
+    document.body
+    .classList
+    .toggle("dark");
+
+
+    const dark =
+    document.body
+    .classList
+    .contains("dark");
+
+
+    localStorage.setItem(
+        "quickfixDarkMode",
+        dark
+    );
+
+
+    document
+    .querySelector(".theme-btn")
+    .innerText =
+    dark ? "☀️" : "🌙";
+
+}
+
+
+/* =========================
+   TOAST
+========================= */
+
+function showToast(message){
+
+    const toast =
+    document
+    .getElementById("toast");
+
+
+    toast.innerText =
+    message;
+
+
+    toast
+    .classList
+    .add("show");
+
+
+    setTimeout(function(){
+
+        toast
+        .classList
+        .remove("show");
+
+    },3000);
+
+}
+
+
+/* =========================
+   MODAL OUTSIDE CLICK
+========================= */
+
+document
+.getElementById("bookingModal")
+.addEventListener(
+"click",
+function(event){
+
+    if(event.target === this){
+
+        closeBooking();
+
+    }
+
+});
+
+
+/* =========================
+   KEYBOARD EVENT
+========================= */
+
+document.addEventListener(
+"keydown",
+function(event){
+
+    if(event.key === "Escape"){
+
+        closeBooking();
+
+        document
+        .getElementById("navLinks")
+        .classList
+        .remove("open");
+
+    }
+
+});
+
+
+/* =========================
+   MOUSE EVENT
+========================= */
+
+const heroCard =
+document.getElementById("heroCard");
+
+
+heroCard.addEventListener(
+"mousemove",
+function(event){
+
+    const rect =
+    heroCard
+    .getBoundingClientRect();
+
+
+    const x =
+    event.clientX -
+    rect.left;
+
+
+    const y =
+    event.clientY -
+    rect.top;
+
+
+    const rotateY =
+    (
+        x /
+        rect.width -
+        .5
+    ) * 5;
+
+
+    const rotateX =
+    -(
+        y /
+        rect.height -
+        .5
+    ) * 5;
+
+
+    heroCard.style.transform =
+
+    `perspective(900px)
+     rotateX(${rotateX}deg)
+     rotateY(${rotateY}deg)`;
+
+});
+
+
+heroCard.addEventListener(
+"mouseleave",
+function(){
+
+    heroCard.style.transform =
+    "perspective(900px) rotateX(0deg) rotateY(0deg)";
+
+});
+
+</script>
+
+</body>
+
+</html>
